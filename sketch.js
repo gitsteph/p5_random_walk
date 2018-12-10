@@ -12,7 +12,8 @@ var lerp_interval;
 
 var current_step;
 var num_steps = 40;
-var step_degree = 50;
+var step_y_offset = 5;
+var step_degree = 40;
 
 
 function restart() {
@@ -28,6 +29,7 @@ function restart() {
     // set starting vertices
     first_point_arr = [starting_x, starting_y];
     second_point_arr = [starting_x, starting_y];
+
     lerp_amt = 0;
     lerp_interval = 1.00/num_steps;
 
@@ -60,8 +62,8 @@ function take_step() {
     // select next vertices
     first_point_arr = second_point_arr;
     second_point_arr = [
-        second_point_arr[0] + random(1, -1) * step_degree,
-        second_point_arr[1] + random(1, -1) * step_degree
+        second_point_arr[0] + random([1, -1]) * step_degree,
+        second_point_arr[1] + random([1, -1]) * step_degree + step_y_offset
     ];
 
     // draw new line
