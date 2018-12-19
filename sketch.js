@@ -22,8 +22,8 @@ function restart() {
     background(0);
     starting_x = windowWidth * 0.98 / 2;
     starting_y = windowHeight * 0.97 / 2;
-    from_color = color(255, 0, 255, 0.2 * 255);
-    to_color = color(0, 255, 255, 0.2 * 255);
+    from_color = color(255, 0, 255, 0.3 * 255);
+    to_color = color(0, 255, 255, 0.3 * 255);
     current_step = 0;
 
     // set starting vertices
@@ -55,7 +55,7 @@ function restart() {
 
 function setup() {
     restart();
-    strokeWeight(3);
+    strokeWeight(8);
 }
 
 function take_step() {
